@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.minichi.book.common.SharedResources;
+import com.minichi.book.engine.BookEngine;
 import com.minichi.book.tools.ImageHandler;
 
 public class MainActivity extends FragmentActivity {
@@ -19,17 +20,19 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         SharedResources.context = getApplicationContext();
+        SharedResources.engine = BookEngine.getInstance();
 
         setContentView(R.layout.activity_main);
         backgroundImage = (ImageView) findViewById(R.id.background_image);
 
         SharedResources.activity = this;
+        SharedResources.engine.start();
 
         hideActivityBar();
 
         setBackgroundImage();
 
-        setContentView(R.layout.main_menu);
+        //setContentView(R.layout.start_menu_fragment);
     }
 
     /*@Override

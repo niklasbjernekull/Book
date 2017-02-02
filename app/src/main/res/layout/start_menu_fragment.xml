@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/start_button_lights"
+        android:layout_width="@dimen/start_button_lights"
+        android:layout_height="@dimen/start_button_lights"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/button_start_lights"/>
+
+    <ImageView
+        android:id="@+id/start_button"
+        android:layout_width="@dimen/start_button"
+        android:layout_height="@dimen/start_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/button_edge_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/button_start" />
+
+    <ImageView
+        android:id="@+id/start_menu_title"
+        android:layout_width="@dimen/title_width"
+        android:layout_height="@dimen/title_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/settings_button"
+        android:layout_width="@dimen/settings_button"
+        android:layout_height="@dimen/settings_button"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/settings"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/pages_button"
+        android:layout_width="@dimen/settings_button"
+        android:layout_height="@dimen/settings_button"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pages"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
