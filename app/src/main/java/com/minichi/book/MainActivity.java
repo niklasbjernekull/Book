@@ -31,8 +31,6 @@ public class MainActivity extends FragmentActivity {
         hideActivityBar();
 
         setBackgroundImage();
-
-        //setContentView(R.layout.start_menu_fragment);
     }
 
     /*@Override
@@ -42,6 +40,12 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
     }*/
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        hideActivityBar();
+    }
 
     private void hideActivityBar() {
         final int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
