@@ -25,6 +25,10 @@ public class BookEngine {
     }
 
     public void start() {
-        fragHandler.changeFragment();
+        fragHandler.changeFragment(FragmentHandler.FragmentScreen.LOGO);
+    }
+
+    public void setMain() {
+        fragHandler.changeFragment(FragmentHandler.FragmentScreen.MENU);
     }
 }

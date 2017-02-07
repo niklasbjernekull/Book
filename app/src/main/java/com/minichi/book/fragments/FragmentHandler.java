@@ -18,14 +18,29 @@ public class FragmentHandler {
     public FragmentHandler() {
     }
 
-    public void changeFragment() {
+    public static enum FragmentScreen {
+        LOGO,
+        MENU,
+        PAGE,
+        SETTINGS
+    }
+
+    public void changeFragment(FragmentScreen fScreen) {
         fragManager = SharedResources.activity.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, getFragment());
+        fragmentTransaction.replace(R.id.fragment_container, getFragment(fScreen));
         fragmentTransaction.commit();
     }
 
-    private Fragment getFragment() {
-        return new StartMenuFragment();
+    private Fragment getFragment(FragmentScreen fScreen) {
+        switch (fScreen) {
+            case LOGO:
+                return new LogoFragment();
+            case MENU:
+                return new StartMenuFragment();
+            default:
+                break;
+        }
+        return null;
     }
 }
