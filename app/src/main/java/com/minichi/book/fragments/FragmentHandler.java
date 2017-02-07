@@ -28,6 +28,7 @@ public class FragmentHandler {
     public void changeFragment(FragmentScreen fScreen) {
         fragManager = SharedResources.activity.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
         fragmentTransaction.replace(R.id.fragment_container, getFragment(fScreen));
         fragmentTransaction.commit();
     }
