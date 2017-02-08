@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Book App</string>
 
-    <color name="white">#FFFFFF</color>
+    <string name="placeholder_text">Hello.\nThis is placeholder.</string>
 </resources>

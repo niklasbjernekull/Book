@@ -23,5 +23,11 @@
     <!-- Settings -->
 
     <!-- Page -->
+    <dimen name="home_button">50dp</dimen>
+
+    <!-- Page 1-->
+    <dimen name="text_box_width">400dp</dimen>
+    <dimen name="text_box_height">150dp</dimen>
+    <dimen name="arrow_button">50dp</dimen>
 
 </resources>

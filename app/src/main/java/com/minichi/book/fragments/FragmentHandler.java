@@ -21,7 +21,7 @@ public class FragmentHandler {
     public static enum FragmentScreen {
         LOGO,
         MENU,
-        PAGE,
+        PAGE1,
         SETTINGS
     }
 
@@ -45,6 +45,8 @@ public class FragmentHandler {
                 return new LogoFragment();
             case MENU:
                 return new StartMenuFragment();
+            case PAGE1:
+                return new PageFragment();
             default:
                 break;
         }

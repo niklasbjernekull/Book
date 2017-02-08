@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.minichi.book.R;
+import com.minichi.book.common.SharedResources;
 
 /**
  * Created by Niklas.bjernekull on 2017-02-01.
@@ -45,9 +46,10 @@ public class StartMenuFragment extends Fragment {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast t = Toast.makeText(getActivity(), "Start", Toast.LENGTH_SHORT);
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.PAGE1);
+                /*Toast t = Toast.makeText(getActivity(), "Start", Toast.LENGTH_SHORT);
                 t.setGravity(Gravity.CENTER, 60, 50);
-                t.show();
+                t.show();*/
             }
         });
 
