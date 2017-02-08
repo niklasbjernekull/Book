@@ -39,7 +39,7 @@ public class LogoFragment extends Fragment {
         background.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedResources.engine.setMain();
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.MENU);
             }
         });
 
