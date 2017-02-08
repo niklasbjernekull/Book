@@ -1,7 +1,5 @@
 package com.minichi.book.fragments;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -23,7 +21,7 @@ import com.minichi.book.common.SharedResources;
  * Created by Niklas.bjernekull on 2017-02-03.
  */
 
-public class PageFragment extends Fragment  {
+public class Page2Fragment extends Fragment  {
     private TextView textField;
     private ImageView arrowLeft;
     private ImageView arrowRight;
@@ -34,16 +32,16 @@ public class PageFragment extends Fragment  {
         return new StartMenuFragment();
     }
 
-    public PageFragment() {
+    public Page2Fragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.page_1_fragment, container, false);
+        View view = inflater.inflate(R.layout.page_2_fragment, container, false);
 
         textField = (TextView) view.findViewById(R.id.text_field);
-        textField.setText("What a lovely morning it was!\nHello world!");
+        textField.setText("A wild strange thing appeared!\nGo away!");
 
 
         homeButton = (ImageView) view.findViewById(R.id.home_button);
@@ -58,7 +56,7 @@ public class PageFragment extends Fragment  {
         arrowLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.MENU);
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.PAGE1);
             }
         });
 
@@ -66,7 +64,7 @@ public class PageFragment extends Fragment  {
         arrowRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.LOGO);
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.MENU);
             }
         });
 

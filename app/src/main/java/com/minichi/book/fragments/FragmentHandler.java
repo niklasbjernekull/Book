@@ -22,6 +22,7 @@ public class FragmentHandler {
         LOGO,
         MENU,
         PAGE1,
+        PAGE2,
         SETTINGS
     }
 
@@ -46,7 +47,9 @@ public class FragmentHandler {
             case MENU:
                 return new StartMenuFragment();
             case PAGE1:
-                return new PageFragment();
+                return new Page1Fragment();
+            case PAGE2:
+                return new Page2Fragment();
             default:
                 break;
         }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/page1_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/duck_background"/>
+
+    <ImageView
+        android:id="@+id/home_button"
+        android:layout_width="@dimen/home_button"
+        android:layout_height="@dimen/home_button"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/text_field"
+        android:layout_width="220dp"
+        android:layout_height="@dimen/text_box_height"
+        android:background="@drawable/rounded_rectangle"
+        android:alpha="0.8"
+        android:adjustViewBounds="true"
+        android:text="@string/placeholder_text"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:padding="10dp"
+        android:layout_alignTop="@+id/home_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/right_button"
+        android:layout_width="@dimen/arrow_button"
+        android:layout_height="@dimen/text_box_height"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/simple_arrow_blue_right"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/character"
+        android:layout_alignEnd="@+id/text_field" />
+
+    <ImageView
+        android:id="@+id/left_button"
+        android:layout_width="@dimen/arrow_button"
+        android:layout_height="@dimen/text_box_height"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/simple_arrow_blue_left"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/character"
+        android:layout_alignStart="@+id/home_button" />
+
+    <ImageView
+        android:id="@+id/character"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/character"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
