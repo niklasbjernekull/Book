@@ -22,6 +22,13 @@
 
     <!-- Settings -->
 
+    <!-- Pages -->
+    <dimen name="page_preview_width">100dp</dimen>
+    <dimen name="page_preview_height">60dp</dimen>
+    <dimen name="page_text_height">40dp</dimen>
+    <dimen name="page_preview_parent_margin">30dp</dimen>
+    <dimen name="page_preview_page_margin">50dp</dimen>
+
     <!-- Page -->
     <dimen name="home_button">50dp</dimen>
 

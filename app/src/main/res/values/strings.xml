@@ -2,4 +2,11 @@
     <string name="app_name">Book App</string>
 
     <string name="placeholder_text">Hello.\nThis is placeholder.</string>
+
+    <string name="page1">Page 1</string>
+    <string name="page2">Page 2</string>
+    <string name="page3">Page 3</string>
+    <string name="page4">Page 4</string>
+    <string name="page5">Page 5</string>
+    <string name="page6">Page 6</string>
 </resources>

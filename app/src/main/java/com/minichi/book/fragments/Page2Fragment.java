@@ -3,6 +3,7 @@ package com.minichi.book.fragments;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -28,8 +29,8 @@ public class Page2Fragment extends Fragment  {
     private ImageView homeButton;
     private ImageView character;
 
-    public static StartMenuFragment newInstance() {
-        return new StartMenuFragment();
+    public static Page2Fragment newInstance() {
+        return new Page2Fragment();
     }
 
     public Page2Fragment() {
@@ -41,6 +42,10 @@ public class Page2Fragment extends Fragment  {
         View view = inflater.inflate(R.layout.page_2_fragment, container, false);
 
         textField = (TextView) view.findViewById(R.id.text_field);
+
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(),"fonts/grobold.ttf");
+        textField.setTypeface(type);
+
         textField.setText("A wild strange thing appeared!\nGo away!");
 
 
@@ -70,7 +75,7 @@ public class Page2Fragment extends Fragment  {
 
         character = (ImageView) view.findViewById(R.id.character);
         Activity a = getActivity();
-        final MediaPlayer mp = MediaPlayer.create(a.getApplicationContext(), R.raw.pikachu);
+        final MediaPlayer mp = MediaPlayer.create(a.getApplicationContext(), R.raw.pika);
         character.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,9 +94,11 @@ public class Page2Fragment extends Fragment  {
     private void characterAnimation() {
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(character, "scaleY", 0.7f);
         scaleY.setDuration(200);
+        scaleY.setRepeatCount(1);
         ObjectAnimator scaleYBack = ObjectAnimator.ofFloat(character, "scaleY", 1f);
         scaleYBack.setDuration(500);
         scaleYBack.setInterpolator(new BounceInterpolator());
+        scaleYBack.setRepeatCount(1);
         final AnimatorSet animatorSet = new AnimatorSet();
         //animatorSet.setStartDelay(1000);
         animatorSet.playSequentially(scaleY, scaleYBack);
@@ -102,7 +109,7 @@ public class Page2Fragment extends Fragment  {
                 animatorSet.start();
             }
         });*/
-        animatorSet.setDuration(scaleY.getDuration()+scaleYBack.getDuration());
+        //animatorSet.setDuration(scaleY.getDuration()+scaleYBack.getDuration());
         character.setLayerType(View.LAYER_TYPE_HARDWARE, null);
         animatorSet.start();
     }

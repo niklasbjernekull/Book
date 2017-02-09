@@ -23,6 +23,7 @@ public class FragmentHandler {
         MENU,
         PAGE1,
         PAGE2,
+        PAGES,
         SETTINGS
     }
 
@@ -50,6 +51,10 @@ public class FragmentHandler {
                 return new Page1Fragment();
             case PAGE2:
                 return new Page2Fragment();
+            case PAGES:
+                return new PagesFragment();
+            case SETTINGS:
+                return new SettingsFragment();
             default:
                 break;
         }

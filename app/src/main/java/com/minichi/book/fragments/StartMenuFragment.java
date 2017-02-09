@@ -47,9 +47,6 @@ public class StartMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.PAGE1);
-                /*Toast t = Toast.makeText(getActivity(), "Start", Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.CENTER, 60, 50);
-                t.show();*/
             }
         });
 
@@ -76,9 +73,7 @@ public class StartMenuFragment extends Fragment {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast t = Toast.makeText(getActivity(), "Settings", Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.LEFT|Gravity.TOP, 10, 100);
-                t.show();
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.SETTINGS);
             }
         });
 
@@ -94,9 +89,7 @@ public class StartMenuFragment extends Fragment {
         pagesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast t = Toast.makeText(getActivity(), "Pages", Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.RIGHT|Gravity.TOP, -300, 100);
-                t.show();
+                SharedResources.engine.setNewFragment(FragmentHandler.FragmentScreen.PAGES);
             }
         });
 

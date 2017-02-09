@@ -21,8 +21,8 @@ public class LogoFragment extends Fragment {
     private ImageView logo;
     private ImageView background;
 
-    public static StartMenuFragment newInstance() {
-        return new StartMenuFragment();
+    public static LogoFragment newInstance() {
+        return new LogoFragment();
     }
 
     public LogoFragment() {

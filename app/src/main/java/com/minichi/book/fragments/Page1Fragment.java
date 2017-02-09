@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -30,8 +31,8 @@ public class Page1Fragment extends Fragment  {
     private ImageView homeButton;
     private ImageView character;
 
-    public static StartMenuFragment newInstance() {
-        return new StartMenuFragment();
+    public static Page1Fragment newInstance() {
+        return new Page1Fragment();
     }
 
     public Page1Fragment() {
@@ -43,6 +44,10 @@ public class Page1Fragment extends Fragment  {
         View view = inflater.inflate(R.layout.page_1_fragment, container, false);
 
         textField = (TextView) view.findViewById(R.id.text_field);
+
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(),"fonts/gothic.ttf");
+        textField.setTypeface(type);
+
         textField.setText("What a lovely morning it was!\nHello world!");
 
 
